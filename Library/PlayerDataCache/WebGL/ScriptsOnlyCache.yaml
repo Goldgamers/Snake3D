@@ -3,20 +3,37 @@ ScriptsOnlyBuild:
     Assembly-CSharp-Editor.dll:
     - HutongGames.PlayMakerEditor.EditorStartupPrefs
     Assembly-CSharp.dll:
+    - MainMenu
     - gameLoop
-    Unity.Postprocessing.Runtime.dll:
-    - UnityEngine.Rendering.PostProcessing.PostProcessResources
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_ColorGradient
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
+    Unity.XR.Management.Editor.dll:
+    - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
+    Unity.XR.Management.dll:
+    - UnityEngine.XR.Management.XRGeneralSettings
+    - UnityEngine.XR.Management.XRManagerSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.BaseInput
+    - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Scenes/startScene.unity:
+    Assets/Scenes/TitleScreen.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -37,6 +54,81 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
+      Script: {instanceID: 11686}
+    - Class: 114
+      Script: {instanceID: 12576}
+    - Class: 114
+      Script: {instanceID: 12710}
+    - Class: 114
+      Script: {instanceID: 13566}
+    - Class: 114
+      Script: {instanceID: 14066}
+    - Class: 114
+      Script: {instanceID: 14088}
+    - Class: 114
+      Script: {instanceID: 14536}
+    - Class: 114
+      Script: {instanceID: 14734}
+    - Class: 114
+      Script: {instanceID: 15090}
+    - Class: 114
+      Script: {instanceID: 15302}
+    - Class: 114
+      Script: {instanceID: 15518}
+    - Class: 114
+      Script: {instanceID: 20280}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/game01.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -52,11 +144,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 15372}
     - Class: 114
-      Script: {instanceID: 29422}
+      Script: {instanceID: 15440}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -130,6 +222,12 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -164,6 +262,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 98aa0a0c8ff2910eb12af89c7e0eb661
+    assemblyName: Unity.XR.Management.dll
+    namespaceName: UnityEngine.XR.Management
+    className: XRGeneralSettings
   - hash:
       serializedVersion: 2
       Hash: 8e0313c6f5e2ce35991fec2d64f8eaab
@@ -232,6 +336,174 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 6f605c580f7ba02889d73bf605c38c8f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: FsmTemplate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorIK
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorMove
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerApplicationEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerControllerColliderHit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFixedUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: da54eb67f2afaa5ecbe765653802c12b
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFSM
+  - hash:
+      serializedVersion: 2
+      Hash: 370593f134e2685b00d73cbf4017d0fe
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGlobals
+  - hash:
+      serializedVersion: 2
+      Hash: 4002df09187c2b317d58e82d9e4795b2
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerLateUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerMouseEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerOnGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerParticleCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 0c0041dcff25af6db1a7c9801584c29f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerPrefs
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay2D
+  - hash:
+      serializedVersion: 2
       Hash: e82c0521cdfe8cb6a168ef7208a98d4a
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -250,6 +522,12 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: c79137f36738778f9e59b8446de44e5f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiFloatValueChangedEvent
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -260,6 +538,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -274,10 +558,22 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 63daf271709c3e5abe7a369ec11248d3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiVector2ValueChangedEvent
   - hash:
       serializedVersion: 2
       Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
@@ -296,6 +592,180 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b73119425cc0ab4ec6eef33ade1132ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiDragEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 6f605c580f7ba02889d73bf605c38c8f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: FsmTemplate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorIK
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorMove
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerApplicationEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerControllerColliderHit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFixedUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: da54eb67f2afaa5ecbe765653802c12b
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFSM
+  - hash:
+      serializedVersion: 2
+      Hash: 370593f134e2685b00d73cbf4017d0fe
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGlobals
+  - hash:
+      serializedVersion: 2
+      Hash: 4002df09187c2b317d58e82d9e4795b2
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerLateUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerMouseEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerOnGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerParticleCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 0c0041dcff25af6db1a7c9801584c29f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerPrefs
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay2D
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -322,6 +792,18 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
+      Hash: b73119425cc0ab4ec6eef33ade1132ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiPointerEvents
+  - hash:
+      serializedVersion: 2
+      Hash: fa61ea5081fbdd58bd83d9cbc787c114
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiIntValueChangedEvent
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -338,6 +820,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: gameLoop
   - hash:
       serializedVersion: 2
       Hash: d6fc8d3165070298511ec776ea575626
@@ -364,6 +852,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 7b7af8d4c569e55f3aaa5aaa1033b8fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiClickEvent
+  - hash:
+      serializedVersion: 2
       Hash: 50c443b12ccc0b475183318b5088bcc5
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -388,6 +882,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 531868fc57d7432ec52d45a0bcbf0d13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerCanvasRaycastFilterProxy
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -410,6 +910,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: dcd4abd5250acc71a0a662b455a0e586
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiBoolValueChangedEvent
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
@@ -442,6 +948,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: b73119425cc0ab4ec6eef33ade1132ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiDropEvent
+  - hash:
+      serializedVersion: 2
       Hash: 8860633d29a22ff64e02e18da3716cdf
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityTemplateProjects
@@ -454,10 +966,352 @@ ScriptsOnlyBuild:
     className: Readme
   - hash:
       serializedVersion: 2
+      Hash: 24c74cc0d527a06113f2b967042769f0
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEditor.XR.LegacyInputHelpers
+    className: CameraOffset
+  - hash:
+      serializedVersion: 2
+      Hash: 6f605c580f7ba02889d73bf605c38c8f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: FsmTemplate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorIK
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorMove
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerApplicationEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerControllerColliderHit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFixedUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: da54eb67f2afaa5ecbe765653802c12b
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFSM
+  - hash:
+      serializedVersion: 2
+      Hash: 370593f134e2685b00d73cbf4017d0fe
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGlobals
+  - hash:
+      serializedVersion: 2
+      Hash: 4002df09187c2b317d58e82d9e4795b2
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerLateUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerMouseEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerOnGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerParticleCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 0c0041dcff25af6db1a7c9801584c29f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerPrefs
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay2D
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 6f605c580f7ba02889d73bf605c38c8f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: FsmTemplate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorIK
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerAnimatorMove
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerApplicationEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerCollisionStay2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerControllerColliderHit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFixedUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: da54eb67f2afaa5ecbe765653802c12b
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerFSM
+  - hash:
+      serializedVersion: 2
+      Hash: 370593f134e2685b00d73cbf4017d0fe
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGlobals
+  - hash:
+      serializedVersion: 2
+      Hash: 4002df09187c2b317d58e82d9e4795b2
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerJointBreak2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerLateUpdate
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerMouseEvents
+  - hash:
+      serializedVersion: 2
+      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerOnGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerParticleCollision
+  - hash:
+      serializedVersion: 2
+      Hash: 0c0041dcff25af6db1a7c9801584c29f
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerPrefs
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerEnter2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerExit2D
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay
+  - hash:
+      serializedVersion: 2
+      Hash: 9b8a30b0d2b39397e408f051bc054940
+    assemblyName: PlayMaker.dll
+    namespaceName: 
+    className: PlayMakerTriggerStay2D
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -478,10 +1332,22 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d06d3090e7e3be00dd03da4fc75c67a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: HutongGames.PlayMaker
+    className: PlayMakerUiEndEditEvent
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -556,6 +1422,12 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
+      Hash: 8ab9295d94483c961936d82d233d3df2
+    assemblyName: Unity.XR.Management.dll
+    namespaceName: UnityEngine.XR.Management
+    className: XRManagerSettings
+  - hash:
+      serializedVersion: 2
       Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -604,743 +1476,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 6f605c580f7ba02889d73bf605c38c8f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: FsmTemplate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorIK
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorMove
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerApplicationEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerControllerColliderHit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFixedUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: da54eb67f2afaa5ecbe765653802c12b
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFSM
-  - hash:
-      serializedVersion: 2
-      Hash: 370593f134e2685b00d73cbf4017d0fe
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGlobals
-  - hash:
-      serializedVersion: 2
-      Hash: 4002df09187c2b317d58e82d9e4795b2
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerLateUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerMouseEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerOnGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerParticleCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 0c0041dcff25af6db1a7c9801584c29f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerPrefs
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 6f605c580f7ba02889d73bf605c38c8f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: FsmTemplate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorIK
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorMove
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerApplicationEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerControllerColliderHit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFixedUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: da54eb67f2afaa5ecbe765653802c12b
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFSM
-  - hash:
-      serializedVersion: 2
-      Hash: 370593f134e2685b00d73cbf4017d0fe
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGlobals
-  - hash:
-      serializedVersion: 2
-      Hash: 4002df09187c2b317d58e82d9e4795b2
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerLateUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerMouseEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerOnGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerParticleCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 0c0041dcff25af6db1a7c9801584c29f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerPrefs
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 6f605c580f7ba02889d73bf605c38c8f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: FsmTemplate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorIK
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorMove
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerApplicationEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerControllerColliderHit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFixedUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: da54eb67f2afaa5ecbe765653802c12b
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFSM
-  - hash:
-      serializedVersion: 2
-      Hash: 370593f134e2685b00d73cbf4017d0fe
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGlobals
-  - hash:
-      serializedVersion: 2
-      Hash: 4002df09187c2b317d58e82d9e4795b2
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerLateUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerMouseEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerOnGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerParticleCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 0c0041dcff25af6db1a7c9801584c29f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerPrefs
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 6f605c580f7ba02889d73bf605c38c8f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: FsmTemplate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorIK
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerAnimatorMove
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerApplicationEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerCollisionStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerControllerColliderHit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFixedUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: da54eb67f2afaa5ecbe765653802c12b
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerFSM
-  - hash:
-      serializedVersion: 2
-      Hash: 370593f134e2685b00d73cbf4017d0fe
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGlobals
-  - hash:
-      serializedVersion: 2
-      Hash: 4002df09187c2b317d58e82d9e4795b2
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerJointBreak2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerLateUpdate
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerMouseEvents
-  - hash:
-      serializedVersion: 2
-      Hash: 65fb86d2f74f034d658ef1bd1f20a8b1
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerOnGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerParticleCollision
-  - hash:
-      serializedVersion: 2
-      Hash: 0c0041dcff25af6db1a7c9801584c29f
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerPrefs
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerEnter2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerExit2D
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay
-  - hash:
-      serializedVersion: 2
-      Hash: 9b8a30b0d2b39397e408f051bc054940
-    assemblyName: PlayMaker.dll
-    namespaceName: 
-    className: PlayMakerTriggerStay2D
-  - hash:
-      serializedVersion: 2
-      Hash: c79137f36738778f9e59b8446de44e5f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiFloatValueChangedEvent
-  - hash:
-      serializedVersion: 2
-      Hash: 63daf271709c3e5abe7a369ec11248d3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiVector2ValueChangedEvent
-  - hash:
-      serializedVersion: 2
-      Hash: b73119425cc0ab4ec6eef33ade1132ea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiDragEvents
-  - hash:
-      serializedVersion: 2
-      Hash: b73119425cc0ab4ec6eef33ade1132ea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiPointerEvents
-  - hash:
-      serializedVersion: 2
-      Hash: fa61ea5081fbdd58bd83d9cbc787c114
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiIntValueChangedEvent
-  - hash:
-      serializedVersion: 2
-      Hash: 7b7af8d4c569e55f3aaa5aaa1033b8fd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiClickEvent
-  - hash:
-      serializedVersion: 2
-      Hash: 531868fc57d7432ec52d45a0bcbf0d13
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerCanvasRaycastFilterProxy
-  - hash:
-      serializedVersion: 2
-      Hash: dcd4abd5250acc71a0a662b455a0e586
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiBoolValueChangedEvent
-  - hash:
-      serializedVersion: 2
-      Hash: b73119425cc0ab4ec6eef33ade1132ea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiDropEvent
-  - hash:
-      serializedVersion: 2
-      Hash: d06d3090e7e3be00dd03da4fc75c67a1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: HutongGames.PlayMaker
-    className: PlayMakerUiEndEditEvent
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: gameLoop
+    className: MainMenu
   platform: 20
   scenePathNames:
-  - Assets/Scenes/startScene.unity
-  playerPath: /home/mvg/Dokumente/Unity Projects/Snake 3D/Build/WebGL/Snake 3D 0.0.0.1a
+  - Assets/Scenes/TitleScreen.unity
+  - Assets/Scenes/game01.unity
+  playerPath: /home/mvg/Dokumente/Unity Projects/Snake3D/Build/OpenGL/Snake3D 0.0.0.1
