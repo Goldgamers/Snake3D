@@ -10,7 +10,7 @@ public class gameLoop : MonoBehaviour
     TextMesh gamescore;
     int scoreCount = 0;
     int x, y; // for random fruit spawning
-    float speed = 1.0f;
+    float speed = 0.1f;
     int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT
     void Start()
     {
@@ -68,7 +68,7 @@ public class gameLoop : MonoBehaviour
         else
         {
             Debug.Log("Other Collision!!");
-
+            Application.LoadLevel(Application.loadedLevel);
         }
 
 
