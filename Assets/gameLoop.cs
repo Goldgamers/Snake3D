@@ -38,6 +38,7 @@ public class gameLoop : MonoBehaviour
         else
         {
             Debug.Log("Other Collision!!");
+            Application.LoadLevel(Application.loadedLevel);
         }
 
 
