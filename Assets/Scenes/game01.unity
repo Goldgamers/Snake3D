@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 468688381}
   - component: {fileID: 468688380}
   - component: {fileID: 468688385}
-  - component: {fileID: 468688386}
+  - component: {fileID: 468688379}
   m_Layer: 0
   m_Name: snakeHead
   m_TagString: snakeHead
@@ -158,6 +158,21 @@ Transform:
   m_Father: {fileID: 995911124}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &468688379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468688377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b61cb86f8a9e96418712519539e0e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraWithScript: {fileID: 1832108036}
+  snakeHead: {fileID: 468688377}
+  fruit: {fileID: 1964224305}
 --- !u!114 &468688380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,18 +274,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 3
---- !u!114 &468688386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468688377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c87a7a8710a9b0f83a733b85de2c7013, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &719853654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1126,7 @@ GameObject:
   - component: {fileID: 1832108039}
   - component: {fileID: 1832108038}
   - component: {fileID: 1832108037}
+  - component: {fileID: 1832108040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -1195,6 +1199,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832108040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832108036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87a7a8710a9b0f83a733b85de2c7013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruit: {fileID: 1964224305}
+  head: {fileID: 468688377}
 --- !u!1 &1964224305
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,20 +6,40 @@ using UnityEngine.UI;
 public class gameLoop : MonoBehaviour
 {
     // Start is called before the first frame update
-    GameObject fruit;
+    public GameObject fruit;
+    public GameObject head;
+    List<GameObject> snakeParts;
     TextMesh gamescore;
     int scoreCount = 0;
     int x, y; // for random fruit spawning
-    float speed = 0.1f;
-    int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT
+    float speed = 0.10f;
+    int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
     void Start()
     {
-        StartCoroutine(walk());
         fruit = GameObject.FindGameObjectWithTag("fruit");
         x = Random.Range(1, 63);
         y = Random.Range(-24, 24);
         Vector3 newPos = new Vector3(x, y, 0);
         fruit.transform.position = newPos;
+
+        snakeParts = new List<GameObject>();
+        snakeParts.Add(head);
+
+        GameObject clone1 = new GameObject();
+        clone1.name = "init_belly";
+        clone1 = Instantiate(head);
+        Vector3 clonePos = head.transform.position;
+        clonePos.x--;
+        clone1.transform.position = clonePos;
+        snakeParts.Add(clone1);
+
+        GameObject clone2 = new GameObject();
+        clone2.name = "init_tail";
+        clone2 = Instantiate(head);
+        clonePos.x--;
+        clone2.transform.position = clonePos;
+        snakeParts.Add(clone2);
+        StartCoroutine(walk());
     }
 
     // Update is called once per frame
@@ -33,76 +53,75 @@ public class gameLoop : MonoBehaviour
     {
         while (true)
         {
-            GameObject head = GameObject.FindGameObjectWithTag("snakeHead");
-            Vector3 posChange = new Vector3(0, 0, 0);
-            if (currentDirecton == 4)
-            {
-                posChange.x = -1;
-            }
-            if (currentDirecton == 2)
-            {
-                posChange.x = 1;
-
-            }
-            if (currentDirecton == 1)
-            {
-                posChange.y = 1;
-
-            }
-            if (currentDirecton == 3)
-            {
-                posChange.y = -1;
-            }
-            head.transform.position = head.transform.position + posChange;
+            GameObject newHead;
+            newHead = Instantiate(snakeParts[0]);
+            newHead.name = "clone_body";
+            Vector3 posChange = getDirectionV();
+            newHead.transform.position = newHead.transform.position + posChange;
+            snakeParts.Insert(0, newHead);
+            Destroy(snakeParts[snakeParts.Count - 1]);
+            snakeParts.Remove(snakeParts[snakeParts.Count - 1]);
             yield return new WaitForSeconds(speed);
         }
     }
-    void OnCollisionEnter(Collision collisionInfo)
+
+    Vector3 getDirectionV()
     {
-        if (collisionInfo.collider.name == "Fruit")
+        Vector3 posChange = new Vector3(0, 0, 0);
+        if (currentDirecton == 4)
         {
-            Debug.Log("Fruit Collision!!");
-            newFruit();
-            scoreCount++;
+            posChange.x = -1;
         }
-        else
+        if (currentDirecton == 2)
         {
-            Debug.Log("Other Collision!!");
-            Application.LoadLevel(Application.loadedLevel);
+            posChange.x = 1;
+
         }
+        if (currentDirecton == 1)
+        {
+            posChange.y = 1;
 
-
-        // print("Detected collision between " + gameObject.name + " and " + collisionInfo.collider.name);
-        // print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
-        // print("Their relative velocity is " + collisionInfo.relativeVelocity);
+        }
+        if (currentDirecton == 3)
+        {
+            posChange.y = -1;
+        }
+        return posChange;
     }
-
     void changeDirection()
     {
         GameObject head = GameObject.FindGameObjectWithTag("snakeHead");
         Vector3 posChange = new Vector3(0, 0, 0);
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentDirecton != 2)
         {
             currentDirecton = 4;
-            Debug.Log("Changed Direction to: " + currentDirecton);
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && currentDirecton != 4)
         {
             currentDirecton = 2;
-            Debug.Log("Changed Direction to: " + currentDirecton);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && currentDirecton != 3)
         {
             currentDirecton = 1;
-            Debug.Log("Changed Direction to: " + currentDirecton);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && currentDirecton != 1)
         {
             currentDirecton = 3;
-            Debug.Log("Changed Direction to: " + currentDirecton);
         }
     }
-    void newFruit()
+    public void addHead()
+    {
+        GameObject clone = Instantiate(snakeParts[0]);
+        clone.name = "clone_offspring";
+        Vector3 newPos = getDirectionV();
+        clone.transform.position = clone.transform.position + newPos;
+        snakeParts.Insert(0, clone);
+    }
+    public void addScore()
+    {
+        scoreCount++;
+    }
+    public void newFruit()
     {
         x = Random.Range(1, 63);
         y = Random.Range(-24, 24);
