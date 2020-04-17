@@ -9,7 +9,6 @@ public class snakeScript : MonoBehaviour
     public GameObject cameraWithScript;
     public GameObject snakeHead;
     public GameObject fruit;
-    public GameObject GameBars;
     gameLoop GameLoop;
     void Start()
     {
@@ -22,11 +21,25 @@ public class snakeScript : MonoBehaviour
     {
 
     }
-    public void Death()
+    public void Death(int Deathreason)
     {
         SceneManager.LoadScene(0);
         GameLoop.isDeath = true;
         int DeathScore = gameLoop.scoreCount;
+
+        switch (Deathreason)
+        {
+            case 1:
+                Debug.Log("died from the Bar Colission");
+                break;
+            case 2:
+                Debug.Log("died from the Clones");
+                break;
+            default:
+                Debug.Log("died from Unknown");
+                break;
+        }
+        WriteScore(gameLoop.scoreCount, Deathreason);
     }
     void OnCollisionEnter(Collision collisionInfo)
     {
@@ -42,7 +55,7 @@ public class snakeScript : MonoBehaviour
             if (collisionInfo.collider.name == "Bar_left" || collisionInfo.collider.name == "Bar_right" || collisionInfo.collider.name == "Bar_top" || collisionInfo.collider.name == "Bar_bottom")
             {
                 Debug.Log("Bar Collision!!");
-                Death();
+                Death(1);
 
             }
             else
@@ -50,7 +63,7 @@ public class snakeScript : MonoBehaviour
                 if (collisionInfo.collider.name == "clone_body")
                 {
                     Debug.Log("Clone Colission!!");
-                    Death();
+                    Death(2);
                 }
             }
 
@@ -61,6 +74,9 @@ public class snakeScript : MonoBehaviour
         print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
         print("Their relative velocity is " + collisionInfo.relativeVelocity);
     }
+    void WriteScore(int Score, int Deathreason)
+    {
 
+    }
 
 }

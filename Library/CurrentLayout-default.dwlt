@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1031
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 137
+  controlID: 60
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 1031
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 70
+  controlID: 66
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 40
+  controlID: 110
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 1152
     height: 624
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -372,20 +372,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/mvg/Dokumente/Unity Projects/Snake3D
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa410000
-    m_LastClickedID: 16890
-    m_ExpandedIDs: 00000000fa4100000042000000ca9a3b
+    m_SelectedIDs: a2420000
+    m_LastClickedID: 17058
+    m_ExpandedIDs: 00000000c841000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -413,7 +413,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa410000
+    m_ExpandedIDs: 00000000c8410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,18 +444,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: snakeScript
-      m_OriginalName: snakeScript
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13380
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: dc420000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ba0dfffff235ffff1436ffff083affff1a3affffce3affff2e3bffff4247ffff26fafffff8faffff9447000004720000e6740000008100001481000022810000
+      m_ExpandedIDs: 0238ffff1e38ffff2238ffff2e38ffff3c38ffff383effff7e3effff9a3effff9e3effffaa3effffb83effffda3effff703fffff8c3fffff903fffff9c3fffffaa3fffff3040ffffd040ffffec40ffffe842fffff442ffff1243ffffd04cffff204dffff3c4dffff384fffff444fffff624ffffff84fffff7cafffff48c4ffff5ac5ffff76c5ffff7ec5ffff8ec5ffffa0c5ffffb6c5fffff8c5ffff5cc6ffffc4c6ffffe2c6ffffdec8ffffeac8ffff1cc9ffff5ef8ffff3efbffff2a410000384100004241000034600000e8660000bc670000cc890000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
