@@ -9,6 +9,7 @@ public class snakeScript : MonoBehaviour
     public GameObject cameraWithScript;
     public GameObject snakeHead;
     public GameObject fruit;
+    public GameObject GameBars;
     gameLoop GameLoop;
     void Start()
     {
@@ -21,6 +22,12 @@ public class snakeScript : MonoBehaviour
     {
 
     }
+    public void Death()
+    {
+        SceneManager.LoadScene(0);
+        GameLoop.isDeath = true;
+        int DeathScore = gameLoop.scoreCount;
+    }
     void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.name == "Fruit")
@@ -32,9 +39,20 @@ public class snakeScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Other Collision!!");
-            SceneManager.LoadScene(0);
-            GameLoop.isDeath = true;
+            if (collisionInfo.collider.name == "Bar_left" || collisionInfo.collider.name == "Bar_right" || collisionInfo.collider.name == "Bar_top" || collisionInfo.collider.name == "Bar_bottom")
+            {
+                Debug.Log("Bar Collision!!");
+                Death();
+
+            }
+            else
+            {
+                if (collisionInfo.collider.name == "clone_body")
+                {
+                    Debug.Log("Clone Colission!!");
+                    Death();
+                }
+            }
 
         }
 
@@ -43,4 +61,6 @@ public class snakeScript : MonoBehaviour
         print("There are " + collisionInfo.contacts.Length + " point(s) of contacts");
         print("Their relative velocity is " + collisionInfo.relativeVelocity);
     }
+
+
 }

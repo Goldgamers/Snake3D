@@ -11,6 +11,7 @@ public class gameLoop : MonoBehaviour
     List<GameObject> snakeParts;
     TextMesh gamescore;
     public static int scoreCount = 0;
+    Renderer newHeadc;
 
     public bool isDeath = false;
     int x, y; // for random fruit spawning
@@ -19,6 +20,8 @@ public class gameLoop : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        isDeath = false;
+
         fruit = GameObject.FindGameObjectWithTag("fruit");
         x = Random.Range(1, 63);
         y = Random.Range(-24, 24);
@@ -44,7 +47,8 @@ public class gameLoop : MonoBehaviour
         snakeParts.Add(clone2);
         StartCoroutine(walk());
         scoreCount = 0;
-        isDeath = false;
+
+
 
     }
 
@@ -54,7 +58,13 @@ public class gameLoop : MonoBehaviour
         changeDirection();
         gamescore = GameObject.FindGameObjectWithTag("gameScore01").GetComponent<TextMesh>();
         gamescore.text = "Score: " + scoreCount;
+
+        newHeadc.material.SetColor("_Color", Random.ColorHSV());
+
+
+
     }
+
     IEnumerator walk()
     {
         while (true)
@@ -68,6 +78,7 @@ public class gameLoop : MonoBehaviour
             Destroy(snakeParts[snakeParts.Count - 1]);
             snakeParts.Remove(snakeParts[snakeParts.Count - 1]);
             yield return new WaitForSeconds(speed);
+            newHeadc = newHead.GetComponent<Renderer>();
         }
     }
 

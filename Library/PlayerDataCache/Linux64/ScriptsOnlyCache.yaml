@@ -4,10 +4,13 @@ ScriptsOnlyBuild:
     - HutongGames.PlayMakerEditor.EditorStartupPrefs
     Assembly-CSharp.dll:
     - MainMenu
+    - PauseMenu
     - gameLoop
+    - snakeScript
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
+    - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -82,21 +85,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12942}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 13960}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 14522}
     - Class: 114
-      Script: {instanceID: 14544}
+      Script: {instanceID: 14546}
     - Class: 114
-      Script: {instanceID: 15046}
+      Script: {instanceID: 15048}
     - Class: 114
-      Script: {instanceID: 15258}
+      Script: {instanceID: 15260}
     - Class: 114
-      Script: {instanceID: 15654}
+      Script: {instanceID: 15656}
     - Class: 114
-      Script: {instanceID: 15890}
+      Script: {instanceID: 15892}
     - Class: 114
-      Script: {instanceID: 16134}
+      Script: {instanceID: 16136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -147,11 +150,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 15964}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 16046}
+      Script: {instanceID: 12800}
+    - Class: 114
+      Script: {instanceID: 13374}
+    - Class: 114
+      Script: {instanceID: 13652}
+    - Class: 114
+      Script: {instanceID: 13960}
+    - Class: 114
+      Script: {instanceID: 14522}
+    - Class: 114
+      Script: {instanceID: 15048}
+    - Class: 114
+      Script: {instanceID: 15260}
+    - Class: 114
+      Script: {instanceID: 15694}
+    - Class: 114
+      Script: {instanceID: 15892}
+    - Class: 114
+      Script: {instanceID: 15966}
+    - Class: 114
+      Script: {instanceID: 16048}
+    - Class: 114
+      Script: {instanceID: 16136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,6 +186,14 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -543,7 +576,7 @@ ScriptsOnlyBuild:
     className: Vignette
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 77a7e6b2f3a42cdb8d0c4e6c4aaa5050
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -903,6 +936,12 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: d5e8bf4ecb7ef1f36dafa5fd3aa0b530
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: snakeScript
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -921,7 +960,7 @@ ScriptsOnlyBuild:
     className: InputDebuggerWindow
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2bfed9425e6cd490760d8b8a0e1a9a35
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameLoop
