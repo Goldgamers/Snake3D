@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class snakeScript : MonoBehaviour
 {
@@ -25,14 +26,15 @@ public class snakeScript : MonoBehaviour
         if (collisionInfo.collider.name == "Fruit")
         {
             Debug.Log("Fruit Collision!!");
-            GameLoop.addScore();
+            GameLoop.addScore(5);
             GameLoop.newFruit();
             GameLoop.addHead();
         }
         else
         {
             Debug.Log("Other Collision!!");
-
+            SceneManager.LoadScene(0);
+            GameLoop.isDeath = true;
 
         }
 

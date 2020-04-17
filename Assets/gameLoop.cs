@@ -10,7 +10,9 @@ public class gameLoop : MonoBehaviour
     public GameObject head;
     List<GameObject> snakeParts;
     TextMesh gamescore;
-    int scoreCount = 0;
+    public static int scoreCount = 0;
+
+    public bool isDeath = false;
     int x, y; // for random fruit spawning
     float speed = 0.10f;
     int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
@@ -40,6 +42,9 @@ public class gameLoop : MonoBehaviour
         clone2.transform.position = clonePos;
         snakeParts.Add(clone2);
         StartCoroutine(walk());
+        scoreCount = 0;
+        isDeath = false;
+
     }
 
     // Update is called once per frame
@@ -117,9 +122,10 @@ public class gameLoop : MonoBehaviour
         clone.transform.position = clone.transform.position + newPos;
         snakeParts.Insert(0, clone);
     }
-    public void addScore()
+    public void addScore(int scoreAdd)
     {
-        scoreCount++;
+        // scoreCount++;
+        scoreCount += scoreAdd;
     }
     public void newFruit()
     {

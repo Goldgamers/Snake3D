@@ -1810,6 +1810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f917e29552f1de4b7722c0b02e5726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraWithScript: {fileID: 0}
+  gameScore: {fileID: 1648862031}
 --- !u!4 &1608201831
 Transform:
   m_ObjectHideFlags: 0
@@ -2348,7 +2350,7 @@ GameObject:
   - component: {fileID: 1832108038}
   - component: {fileID: 1832108037}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Title Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
