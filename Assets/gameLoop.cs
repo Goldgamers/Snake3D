@@ -18,6 +18,7 @@ public class gameLoop : MonoBehaviour
     int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
     void Start()
     {
+        Time.timeScale = 1f;
         fruit = GameObject.FindGameObjectWithTag("fruit");
         x = Random.Range(1, 63);
         y = Random.Range(-24, 24);
