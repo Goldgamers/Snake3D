@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿// using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // using UnityEngine.UI;
+// using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 public class GameLoop : MonoBehaviour
 {
@@ -18,7 +21,13 @@ public class GameLoop : MonoBehaviour
     private const float Speed = 0.10f;
     private int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
     private GameObject newHead;
-    
+    InputMaster controls;
+
+
+    private void Awake()
+    {
+        controls = new InputMaster();
+    }
 
     public static int GetScore()
     {
@@ -106,7 +115,7 @@ public class GameLoop : MonoBehaviour
 
     private void ChangeDirection()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentDirecton != 2)
+        /*if (Input.GetKeyDown(KeyCode.LeftArrow) && currentDirecton != 2)
         {
             currentDirecton = 4;
         }
@@ -121,8 +130,30 @@ public class GameLoop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow) && currentDirecton != 1)
         {
             currentDirecton = 3;
+        }*/
+        
+        if ( currentDirecton != 2)
+        {
+            controls.Gameplay.ChangeDirLeft.performed += ctx => currentDirecton = 4;
+        }
+        if (currentDirecton != 4)
+        {
+            controls.Gameplay.ChangeDirRight.performed += ctx => currentDirecton = 2;
+        }
+        if (currentDirecton != 3)
+        {
+            controls.Gameplay.ChangeDirUp.performed += ctx => currentDirecton = 1;
+        }
+        if (currentDirecton != 1)
+        {
+            controls.Gameplay.ChangeDirDown.performed += ctx => currentDirecton = 3;
         }
     }
+    
+    
+    
+  
+  
     public void AddHead()
     {
         var clone = Instantiate(snakeParts[0]);
@@ -146,4 +177,8 @@ public class GameLoop : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        controls.Gameplay.Enable();
+    }
 }

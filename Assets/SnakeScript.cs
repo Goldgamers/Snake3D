@@ -9,10 +9,10 @@ public class SnakeScript : MonoBehaviour
     public GameObject cameraWithScript;
     private GameLoop gameLoop;
     
-    void Start()
+   private void Start()
     {
         gameLoop = cameraWithScript.GetComponent<GameLoop>();
-
+ 
     }
     private static void Death(int deathreason)
     {
