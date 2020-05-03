@@ -1,6 +1,9 @@
 ﻿// using System.Collections;
 // using System.Collections.Generic;
+
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -9,12 +12,17 @@ public class MainMenu : MonoBehaviour
     public TextMesh gameScore;
 
     private bool showDeathScreen;
+    static InputMaster controls;
+    private void Awake()
+    {
+        controls = new InputMaster();
+    }
 
     
     // This is to load the next Scene
     public void TransitionToMainGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -26,9 +34,16 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    private static readonly Action<InputAction.CallbackContext> TransMenu = ctx =>
+    {
+        SceneManager.LoadScene(1);
+        controls.UI.StartGame.performed -= TransMenu;
+    };
 
     private void Start()
     {
+        controls.UI.StartGame.performed += TransMenu;
+       
         var lastDeathReason = GameLoop.lastDeathReason;
         try
         {
@@ -59,4 +74,10 @@ public class MainMenu : MonoBehaviour
 
 
     }
+    private void OnEnable()
+    {
+        controls.UI.Enable();
+    }
+
+   
 }

@@ -205,6 +205,22 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""StartGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""dcc4f620-4166-4cff-8da0-6859fcaa3d43"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""PauseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f2ed418-43e1-49ae-a1f6-f9e6a66f5ec1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -251,6 +267,50 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""MenuDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3449053-9c7d-412f-81ea-dbec9929d23e"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""StartGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c5118a3-3165-411b-b828-1b132f72f96e"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""StartGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e30508e4-3e1c-45f7-b77b-20cf0b727370"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""PauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d17e4ec4-97d6-49d7-b2c7-da3e193feb43"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""PauseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -290,6 +350,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MenuUp = m_UI.FindAction("MenuUp", throwIfNotFound: true);
         m_UI_MenuDown = m_UI.FindAction("MenuDown", throwIfNotFound: true);
+        m_UI_StartGame = m_UI.FindAction("StartGame", throwIfNotFound: true);
+        m_UI_PauseMenu = m_UI.FindAction("PauseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -398,12 +460,16 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private IUIActions m_UIActionsCallbackInterface;
     private readonly InputAction m_UI_MenuUp;
     private readonly InputAction m_UI_MenuDown;
+    private readonly InputAction m_UI_StartGame;
+    private readonly InputAction m_UI_PauseMenu;
     public struct UIActions
     {
         private @InputMaster m_Wrapper;
         public UIActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @MenuUp => m_Wrapper.m_UI_MenuUp;
         public InputAction @MenuDown => m_Wrapper.m_UI_MenuDown;
+        public InputAction @StartGame => m_Wrapper.m_UI_StartGame;
+        public InputAction @PauseMenu => m_Wrapper.m_UI_PauseMenu;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -419,6 +485,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @MenuDown.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMenuDown;
                 @MenuDown.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMenuDown;
                 @MenuDown.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMenuDown;
+                @StartGame.started -= m_Wrapper.m_UIActionsCallbackInterface.OnStartGame;
+                @StartGame.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnStartGame;
+                @StartGame.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnStartGame;
+                @PauseMenu.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPauseMenu;
+                @PauseMenu.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPauseMenu;
+                @PauseMenu.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPauseMenu;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -429,6 +501,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @MenuDown.started += instance.OnMenuDown;
                 @MenuDown.performed += instance.OnMenuDown;
                 @MenuDown.canceled += instance.OnMenuDown;
+                @StartGame.started += instance.OnStartGame;
+                @StartGame.performed += instance.OnStartGame;
+                @StartGame.canceled += instance.OnStartGame;
+                @PauseMenu.started += instance.OnPauseMenu;
+                @PauseMenu.performed += instance.OnPauseMenu;
+                @PauseMenu.canceled += instance.OnPauseMenu;
             }
         }
     }
@@ -462,5 +540,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     {
         void OnMenuUp(InputAction.CallbackContext context);
         void OnMenuDown(InputAction.CallbackContext context);
+        void OnStartGame(InputAction.CallbackContext context);
+        void OnPauseMenu(InputAction.CallbackContext context);
     }
 }

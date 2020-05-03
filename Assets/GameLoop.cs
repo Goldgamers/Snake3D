@@ -1,7 +1,10 @@
 ﻿// using System;
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 // using UnityEngine.UI;
 // using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
@@ -13,15 +16,55 @@ public class GameLoop : MonoBehaviour
     public GameObject head;
     List<GameObject> snakeParts;
     public TextMesh gamescore;
+
     private static int scoreCount;
+
     // Renderer newHeadc;
     public static int lastDeathReason;
     public static bool isDeath;
     int x, y; // for random fruit spawning
     private const float Speed = 0.10f;
-    private int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
+    private static int currentDirecton = 2; // clockwise 1 UP 2 RIGHT 3 DOWN 4 LEFT 
     private GameObject newHead;
     InputMaster controls;
+    public GameObject pauseMenuUi;
+    private bool gameIsPaused;
+
+    private readonly Action<InputAction.CallbackContext> changeDirUp = ctx =>
+    {
+        if (currentDirecton != 3)
+        {
+            currentDirecton = 1;
+            Debug.Log("UP");
+        }
+    };
+
+    private readonly Action<InputAction.CallbackContext> changeDirDown = ctx =>
+    {
+        if (currentDirecton != 1)
+        {
+            currentDirecton = 3;
+            Debug.Log("DOWN");
+        }
+    };
+
+    private readonly Action<InputAction.CallbackContext> changeDirLeft = ctx =>
+    {
+        if (currentDirecton != 2)
+        {
+            currentDirecton = 4;
+            Debug.Log("LEFT");
+        }
+    };
+
+    private readonly Action<InputAction.CallbackContext> changeDirRight = ctx =>
+    {
+        if (currentDirecton != 4)
+        {
+            currentDirecton = 2;
+            Debug.Log("RIGHT");
+        }
+    };
 
 
     private void Awake()
@@ -63,15 +106,46 @@ public class GameLoop : MonoBehaviour
         snakeParts.Add(clone2);
         StartCoroutine(Walk());
         scoreCount = 0;
+        controls.Gameplay.ChangeDirLeft.started += changeDirLeft;
+        controls.Gameplay.ChangeDirRight.started += changeDirRight;
+        controls.Gameplay.ChangeDirUp.started += changeDirUp;
+        controls.Gameplay.ChangeDirDown.started += changeDirDown;
 
+        controls.UI.PauseMenu.started += ctx =>
+        {
+            Debug.Log("PAUSE GAME");
+            if (gameIsPaused) Resume();
+            else Pause();
+        };
 
-        // newHeadc = newHead.GetComponent<Renderer>();
+        
+    }
+
+    private void Resume()
+    {
+        pauseMenuUi.SetActive(false);
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        controls.Gameplay.ChangeDirLeft.started += changeDirLeft;
+        controls.Gameplay.ChangeDirRight.started += changeDirRight;
+        controls.Gameplay.ChangeDirUp.started += changeDirUp;
+        controls.Gameplay.ChangeDirDown.started += changeDirDown;
+    }
+
+    private void Pause()
+    {
+        pauseMenuUi.SetActive(true);
+        Time.timeScale = 0f;
+        gameIsPaused = true;
+        controls.Gameplay.ChangeDirLeft.started -= changeDirLeft;
+        controls.Gameplay.ChangeDirRight.started -= changeDirRight;
+        controls.Gameplay.ChangeDirUp.started -= changeDirUp;
+        controls.Gameplay.ChangeDirDown.started -= changeDirDown;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        ChangeDirection();
         gamescore.text = "Score: " + scoreCount;
     }
 
@@ -87,8 +161,8 @@ public class GameLoop : MonoBehaviour
             Destroy(snakeParts[snakeParts.Count - 1]);
             snakeParts.Remove(snakeParts[snakeParts.Count - 1]);
             yield return new WaitForSeconds(Speed);
-
         }
+
         // ReSharper disable once IteratorNeverReturns
     }
 
@@ -110,50 +184,10 @@ public class GameLoop : MonoBehaviour
                 posChange.y = -1;
                 break;
         }
+
         return posChange;
     }
 
-    private void ChangeDirection()
-    {
-        /*if (Input.GetKeyDown(KeyCode.LeftArrow) && currentDirecton != 2)
-        {
-            currentDirecton = 4;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && currentDirecton != 4)
-        {
-            currentDirecton = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && currentDirecton != 3)
-        {
-            currentDirecton = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && currentDirecton != 1)
-        {
-            currentDirecton = 3;
-        }*/
-        
-        if ( currentDirecton != 2)
-        {
-            controls.Gameplay.ChangeDirLeft.performed += ctx => currentDirecton = 4;
-        }
-        if (currentDirecton != 4)
-        {
-            controls.Gameplay.ChangeDirRight.performed += ctx => currentDirecton = 2;
-        }
-        if (currentDirecton != 3)
-        {
-            controls.Gameplay.ChangeDirUp.performed += ctx => currentDirecton = 1;
-        }
-        if (currentDirecton != 1)
-        {
-            controls.Gameplay.ChangeDirDown.performed += ctx => currentDirecton = 3;
-        }
-    }
-    
-    
-    
-  
-  
     public void AddHead()
     {
         var clone = Instantiate(snakeParts[0]);
@@ -163,10 +197,12 @@ public class GameLoop : MonoBehaviour
         snakeParts.Insert(0, clone);
         // newHeadc.material.SetColor("_Color", Random.ColorHSV());
     }
+
     public void AddScore(int scoreAdd)
     {
         scoreCount += scoreAdd;
     }
+
     public void NewFruit()
     {
         x = Random.Range(1, 63);
@@ -174,11 +210,11 @@ public class GameLoop : MonoBehaviour
         Debug.Log(x + " / " + y);
         var newPos = new Vector3(x, y, 0);
         fruit.transform.position = newPos;
-
     }
 
     private void OnEnable()
     {
         controls.Gameplay.Enable();
+        controls.UI.Enable();
     }
 }
